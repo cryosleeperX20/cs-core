@@ -1,3 +1,7 @@
+# LeetCode Problem 1948: Delete Duplicate Folders in a System
+# Aim: Given a list of folder paths, remove all duplicate folders (subtrees with identical structure and names).
+# Output the list of remaining folder paths in any order.
+
 from collections import defaultdict
 
 class TreeNode:
