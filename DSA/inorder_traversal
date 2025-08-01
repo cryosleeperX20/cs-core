@@ -1,0 +1,23 @@
+# - Performs inorder traversal (Left -> Node -> Right) of a binary tree.
+# - Uses recursion to collect the node values in the correct order.
+# - Returns the result as a list of integers.
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def inorderTraversal(self, root):
+        result = []
+
+        def inorder(node):
+            if not node:
+                return
+            inorder(node.left)      # Traverse left subtree
+            result.append(node.val) # Visit current node
+            inorder(node.right)     # Traverse right subtree
+
+        inorder(root)
+        return result
